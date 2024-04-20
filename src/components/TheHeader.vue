@@ -1,6 +1,6 @@
 <template>
     <header class="TheHeader">
-        header
+        Futuro menu
     </header>
 </template>
 
