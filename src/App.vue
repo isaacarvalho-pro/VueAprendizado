@@ -15,6 +15,9 @@
   </div>
 
 
+ 
+
+
   <div v-if="accessLevel === 'admin'">
     Admin
   </div>
@@ -29,8 +32,14 @@
               <!--obj é uma variavel local-->
   <div v-for="(obj, index) in todos" v-bind:key="obj.id">
 
+    <img
+      v-if="obj.imgSrc" 
+      v-bind:src="obj.imgSrc" 
+      
+      :alt="imgAlt">
     {{index}}-{{ obj.title }}
   </div>
+<!--podemos usar : em vez de v-bind -->
 
 
 </template>
@@ -45,6 +54,7 @@ export default {
   },
   data() {
     return {
+      imgAlt: 'Imagem teste',
       showHeader: true,
       firstName: 'Isaac',
       lastName: 'Carvalho da Mota',
@@ -56,13 +66,15 @@ export default {
             "userId": 1,
             "id": 1,
             "title": "delectus aut autem",
-            "completed": false
+            "completed": false,
+            "imgSrc": "https://placehold.co/40",
           },
           {
             "userId": 1,
             "id": 2,
             "title": "quis ut nam facilis et officia qui",
-            "completed": false
+            "completed": false,
+            "imgSrc": "https://placehold.co/40",
           },
           {
             "userId": 1,
