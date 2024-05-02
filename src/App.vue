@@ -4,7 +4,20 @@
 
 
   <div>
-    <h1 :class="{'titulo': true, 'titulo-home': isHome}">curso vue.js 3</h1>
+    <h1 :class="classVar">curso vue.js 3</h1>
+
+
+    <p :class="pClass">
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet posuere ligula. Nulla nec lacinia lacus, eu vulputate mi. Cras nec vehicula lacus. Nunc non mollis nulla. Praesent semper sed elit eu faucibus. Nulla egestas ante ac elit porta finibus. Aenean mattis nisi justo, eget facilisis massa hendrerit ut. Integer euismod sem mauris, vestibulum vestibulum purus luctus eu.
+
+      Suspendisse dignissim auctor enim, sed accumsan felis vehicula ut. Morbi lacinia tellus dolor, non vulputate mauris malesuada ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vitae pretium purus. Quisque vel turpis quam. Mauris metus metus, elementum et vehicula ut, accumsan quis neque. Cras venenatis metus vitae pellentesque facilisis. Morbi vitae placerat nunc. Ut nec libero mi. Curabitur ac sagittis nulla. Phasellus pellentesque condimentum volutpat. Morbi mattis, diam at faucibus hendrerit, quam purus interdum odio, ut auctor erat ligula vitae erat. Proin efficitur nisi a nulla dignissim, eu vulputate ex cursus.
+    </p>
+
+
+    <p :style="styleVar">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci turpis, cursus in elit eu, fringilla scelerisque tortor. Suspendisse potenti. In sodales hendrerit ex, sed ornare dui mattis at. Donec sollicitudin tincidunt rhoncus. Nunc vitae placerat est. Maecenas ipsum libero, ultricies vitae elit quis, rhoncus mattis urna. Integer interdum ornare elit, a tempus augue tincidunt ut. Fusce sodales et dolor ac consectetur. Duis vel diam tempor, aliquam dolor nec, rhoncus ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam mollis rutrum tristique. 
+    </p>
   </div>
 
 
@@ -61,8 +74,9 @@ export default {
   },
   data() {
     return {
-      isHome: true,
-      classVar: 'titulo',
+      styleVar: {'color': 'white', backgroundColor: 'black'},
+      pClass: 'paragrafo',
+      classVar: {'titulo': true},
       imgAlt: 'Imagem teste',
       showHeader: true,
       firstName: 'Isaac',
@@ -127,5 +141,11 @@ export default {
 .titulo-home{
   color: red;
   font-size: 100px;
+}
+
+.paragrafo{
+  color: lightseagreen
+
+
 }
 </style>
