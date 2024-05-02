@@ -2,6 +2,13 @@
   <TheHeader v-show="showHeader">
   </TheHeader>
 
+
+  <div>
+    <h1 :class="{'titulo': true, 'titulo-home': isHome}">curso vue.js 3</h1>
+  </div>
+
+
+
   <div v-show="showName">
     Nome: {{
       firstName
@@ -54,6 +61,8 @@ export default {
   },
   data() {
     return {
+      isHome: true,
+      classVar: 'titulo',
       imgAlt: 'Imagem teste',
       showHeader: true,
       firstName: 'Isaac',
@@ -108,5 +117,15 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+
+.titulo{
+  color: blue;
+}
+
+.titulo-home{
+  color: red;
+  font-size: 100px;
 }
 </style>
